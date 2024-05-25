@@ -1,5 +1,7 @@
 ---
-
+import MobileHamburger from '../components/MobileHamburger.astro';
+import Button from '../components/Button.astro';
+import '../styles/global.css'
 ---
 
 <html lang="en">
@@ -10,7 +12,42 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="text-lg font-Epilogue">
+		<div id="app">
+			<header class="p-4 flex items-center justify-between">
+				<div id="page-logo">
+					<a href="#">
+						<img src="/public/images/logo.svg" alt="Snap logo">
+					</a>
+				</div>
+				<div class="menu">
+					<MobileHamburger />
+				</div>
+			</header>
+			<main class="page-content">
+				<section class="page-banner">
+					<img src="/public/images/image-hero-mobile.png" alt="page banner">
+				</section>
+				<section class="page-description text-center mx-3">
+					<h1 class="font-bold text-4xl mt-7 mb-3">Make remote work</h1>
+					<p class="mb-8 mx-4 font-medium text-Medium-Gray text-base">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+					<Button />
+					<ul class="mt-16 flex gap-4 justify-center items-center">
+						<li>
+							<img class='compony-logo' alt='edatabiz' src='/public/images/client-databiz.svg'>
+						</li>
+						<li>
+							<img class='compony-logo' alt='edatabiz' src='/public/images/client-audiophile.svg'>
+						</li>
+						<li>
+							<img class='compony-logo' alt='edatabiz' src='/public/images/client-meet.svg'>
+						</li>
+						<li>
+							<img class='compony-logo' alt='edatabiz' src='/public/images/client-maker.svg'>
+						</li>
+					</ul>
+				</section>
+			</main>
+		</div>
 	</body>
 </html>

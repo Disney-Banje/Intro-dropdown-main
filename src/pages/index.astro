@@ -1,7 +1,8 @@
 ---
 import MobileHamburger from '../components/MobileHamburger.astro';
+import Menu from '../components/Menu.astro';
 import Button from '../components/Button.astro';
-import '../styles/global.css'
+import '../styles/global.css';
 ---
 
 <html lang="en">
@@ -12,41 +13,43 @@ import '../styles/global.css'
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body class="text-lg font-Epilogue">
+	<body class="text-lg font-Epilogue font-medium">
 		<div id="app">
-			<header class="p-4 flex items-center justify-between">
+			<header class="p-4 flex items-center justify-between md:gap-12 md:mb-12">
 				<div id="page-logo">
 					<a href="#">
-						<img src="/public/images/logo.svg" alt="Snap logo">
+						<img src="../../src/assets/logo.svg" alt="Snap logo">
 					</a>
 				</div>
-				<div class="menu">
-					<MobileHamburger />
-				</div>
+				<MobileHamburger />
+				<Menu />
 			</header>
-			<main class="page-content">
-				<section class="page-banner">
-					<img src="/public/images/image-hero-mobile.png" alt="page banner">
-				</section>
-				<section class="page-description text-center mx-3">
-					<h1 class="font-bold text-4xl mt-7 mb-3">Make remote work</h1>
-					<p class="mb-8 mx-4 font-medium text-Medium-Gray text-base">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+			<main class="page-content flex flex-col-reverse md:grid md:grid-cols-2 lg:mx-auto lg:w-11/12">
+				<section class="page-description text-center md:text-start mx-3 md:mr-20 md:self-center">
+					<h1 class="font-bold text-4xl mt-7 md:text-5xl mb-3 lg:hidden">Make remote work</h1>
+					<h1 class="font-bold text-4xl mt-7 mb-3 lg:text-7xl hidden md:block">Make <br> remote work</h1>
+					<p class="mb-8 mx-4 md:mx-0 md:my-12 font-medium text-Medium-Gray text-base lg:w-4/6">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
 					<Button />
-					<ul class="mt-16 flex gap-4 justify-center items-center">
+					<ul class="mt-16 flex justify-between items-center lg:w-5/6">
 						<li>
-							<img class='compony-logo' alt='edatabiz' src='/public/images/client-databiz.svg'>
+							<img class='compony-logo' alt='edatabiz' src='../../src/assets/client-databiz.svg'>
 						</li>
 						<li>
-							<img class='compony-logo' alt='edatabiz' src='/public/images/client-audiophile.svg'>
+							<img class='compony-logo' alt='edatabiz' src='../../src/assets/client-audiophile.svg'>
 						</li>
 						<li>
-							<img class='compony-logo' alt='edatabiz' src='/public/images/client-meet.svg'>
+							<img class='compony-logo' alt='edatabiz' src='../../src/assets/client-meet.svg'>
 						</li>
 						<li>
-							<img class='compony-logo' alt='edatabiz' src='/public/images/client-maker.svg'>
+							<img class='compony-logo' alt='edatabiz' src='../../src/assets/client-maker.svg'>
 						</li>
 					</ul>
 				</section>
+				<!-- <img src="" alt="page banner" class="md:hidden"> -->
+				<picture class="lg:w-[28.0rem] md:justify-self-center object-cover">
+					<source srcset="../../src/assets/image-hero-desktop.png" media="(min-width: 768px)"/>
+					<img src="../../src/assets/image-hero-mobile.png" alt="Hero mobile" class="w-full">
+				</picture>
 			</main>
 		</div>
 	</body>

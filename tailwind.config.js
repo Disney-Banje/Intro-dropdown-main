@@ -12,6 +12,7 @@ export default {
       'Almost-white': 'hsl(0, 0%, 98%)',
       'Medium-Gray': 'hsl(0, 0%, 41%)',
       'Almost-Black': 'hsl(0, 0%, 8%)',
+      'White': 'rgb(255 255 255)',
     },
     fontFamily: {
       Epilogue: ["Epilogue", "sans-serif"],

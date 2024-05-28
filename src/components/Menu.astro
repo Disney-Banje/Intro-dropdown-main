@@ -1,36 +1,39 @@
 ---
-
+import Features from './Features.astro';
+import Company from './Company.astro';
 ---
 
-<nav class="navigation-links hidden grow md:flex justify-between items-center">
+<nav class="navigation-links hidden grow md:flex justify-between items-center text-Medium-Gray">
     <section class="page-links">
-        <ul class="flex gap-6">
-            <li>
-                <a href="#" class="flex gap-1 items-center">
+        <ul class="flex gap-10">
+            <li class=" dropdown relative">
+                <a href="#" class=" dropdown-btn flex gap-1 items-center hover:text-Almost-Black active:text-Almost-Black">
                     <span>Features</span>
-                    <img src='../../src/assets/icon-arrow-down.svg' alt="arrow down">
+                    <img src='../../src/assets/icon-arrow-down.svg' alt="arrow down" class="arrow">
                 </a>
+                <Features />
             </li>
-            <li>
-                <a href="#" class="flex gap-1 items-center">
+            <li class=" dropdown relative">
+                <a href="#" class="dropdown-btn flex gap-1 items-center hover:text-Almost-Black active:text-Almost-Black">
                     <span>Company</span>
-                    <img src='/../../src/assets/icon-arrow-down.svg' alt="arrow down">
+                    <img src='/../../src/assets/icon-arrow-down.svg' alt="arrow down" class="arrow">
                 </a>
+                <Company />
             </li>
             <li>
-                <a href="#">
+                <a href="#" class="hover:text-Almost-Black active:text-Almost-Black">
                     Careers
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" class="hover:text-Almost-Black active:text-Almost-Black">
                     About
                 </a>
             </li>
         </ul>
     </section>
     <section class="cta-btn flex gap-8 items-center">
-        <a href="#" class="login-btn">Login</a>
-        <a href="#" class="register-btn py-1 px-4 border-2 border-x-Almost-Black rounded-lg">Register</a>
+        <a href="#" class="login-btn hover:text-Almost-Black active:text-Almost-Black">Login</a>
+        <a href="#" class="register-btn py-1 px-4 border-2 border-x-Medium-Gray rounded-lg hover:text-Almost-Black active:text-Almost-Black">Register</a>
     </section>
 </nav>
